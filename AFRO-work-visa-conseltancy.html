@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AFRO - Work visa consultancy services providing professional guidance for work visas across Europe, Thailand, and North America.">
+    <meta name="author" content="AFRO Consultancy">
+    <title>AFRO Consultancy</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Base Colors */
+        :root {
+            --soft-blue: #A4C6E1;
+            --warm-beige: #F5E0C3;
+            --dark-blue: #2C3E50;
+            --light-gray: #ECF0F1;
+            --accent-color: #34495E;
+            --flag-opacity: 0.15;
+        }
+
+        /* Background Image with Flags */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--warm-beige);
+            color: var(--dark-blue);
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_the_United_States.svg'), 
+                              url('https://upload.wikimedia.org/wikipedia/commons/0/0a/Flag_of_Canada.svg'),
+                              url('https://upload.wikimedia.org/wikipedia/commons/0/0f/Flag_of_the_United_Kingdom.svg'), 
+                              url('https://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_Germany.svg'),
+                              url('https://upload.wikimedia.org/wikipedia/commons/6/6d/Flag_of_France.svg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-blend-mode: overlay;
+            background-color: #d1e1f2;
+        }
+
+        /* Basic Styling */
+        header {
+            background-color: var(--soft-blue);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-bottom: 5px solid var(--dark-blue);
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            background-color: var(--dark-blue);
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+            color: var(--soft-blue);
+        }
+
+        section {
+            padding: 40px 20px;
+            background-color: var(--light-gray);
+            margin-bottom: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            color: var(--dark-blue);
+            text-align: center;
+        }
+
+        .services,
+        .contact-form,
+        .video-upload,
+        .flag-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .service-item,
+        .form-group,
+        .video-upload,
+        .flag-item {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            text-align: center;
+        }
+
+        .service-item h3,
+        .form-group label {
+            color: var(--dark-blue);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .video-upload input[type="file"] {
+            margin-top: 10px;
+        }
+
+        footer {
+            background-color: var(--dark-blue);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .file-size-info {
+            color: #e74c3c;
+            font-size: 14px;
+        }
+
+        button {
+            background-color: var(--soft-blue);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: var(--dark-blue);
+        }
+
+        /* Flag Section */
+        .flag-section img {
+            width: 80px;
+            height: auto;
+            margin: 10px;
+            opacity: var(--flag-opacity);
+        }
+
+        /* Responsive Layout */
+        @media (max-width: 768px) {
+            .services,
+            .contact-form,
+            .video-upload,
+            .flag-section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .service-item,
+            .form-group,
+            .video-upload {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+
+            header {
+                padding: 20px;
+            }
+
+            nav {
+                padding: 15px;
+            }
+
+            nav a {
+                margin: 0 10px;
+            }
+
+            footer {
+                padding: 10px;
+            }
+        }
+
+        /* Additional Styling for Small Screens */
+        @media (max-width: 480px) {
+            header {
+                padding: 15px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            .form-group input,
+            .form-group textarea {
+                padding: 8px;
+            }
+
+            button {
+                width: 100%;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>AFRO Consultancy</h1>
+        <p>Guiding your path to success with work visas and professional advice</p>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav>
+        <a href="#services">Services</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- About Us Section -->
+    <section id="about" style="background-color: var(--light-gray);">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>At <strong>AFRO Consultancy</strong>, we understand that securing a work visa can be a complex and stressful process. Our mission is to provide clear, professional, and family-like support to each applicant. We treat every client as part of our extended family, ensuring that their journey is as smooth as possible. Whether you are an individual seeking international career opportunities or a company in need of foreign talent, our team is committed to delivering tailored solutions with the highest levels of transparency and care.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services">
+                <!-- Service 1 -->
+                <div class="service-item">
+                    <h3>Visa Application Assistance</h3>
+                    <p>We help you with every step of your work visa application, ensuring your paperwork is accurate and timely.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="service-item">
+                    <h3>Employer Consulting</h3>
+                    <p>We assist companies in hiring foreign talent by guiding them through the visa application and compliance processes.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="service-item">
+                    <h3>Visa Renewal & Extensions</h3>
+                    <p>Need to extend or renew your work visa? We’ll ensure a seamless and timely process to keep you legally compliant.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flag Section for International Representation -->
+    <section id="flags" class="flag-section">
+        <h2>We Support International Applicants</h2>
+        <div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_Thailand.svg" alt="Thailand Flag">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Flag_of_Germany.svg" alt="Germany Flag">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Flag_of_France.svg" alt="France Flag">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Flag_of_the_United_Kingdom.svg" alt="UK Flag">
+        </div>
+    </section>
+
+    <!-- Video Upload Section for Applicants -->
+    <section id="video-upload" class="video-upload">
+        <h2>Upload Your Videos</h2>
+        <p>Applicants, please upload your typing skill video and self-introduction video below. Maximum file size for each video is 50MB.</p>
+
+        <form id="video-form" action="https://formspree.io/f/mqkpybeo" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" placeholder="Your phone number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telegram">Telegram Address:</label>
+                <input type="text" id="telegram" name="telegram" placeholder="Your Telegram address" required>
+            </div>
+
+            <div class="form-group">
+                <label for="typing-skill-video">Typing Skill Video:</label>
+                <input type="file" id="typing-skill-video" name="typing-skill-video" accept="video/mp4, video/webm, video/ogg" required>
+                <p class="file-size-info">Max size: 50MB. Accepted formats: MP4, WebM, OGG</p>
+            </div>
+
+            <div class="form-group">
+                <label for="self-introduction-video">Self Introduction Video:</label>
+                <input type="file" id="self-introduction-video" name="self-introduction-video" accept="video/mp4, video/webm, video/ogg" required>
+                <p class="file-size-info">Max size: 50MB. Accepted formats: MP4, WebM, OGG</p>
+            </div>
+
+            <button type="submit">Submit Your Application</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Contact Us at: <a href="mailto:getnetsalamlak@gmail.com">getnetsalamlak@gmail.com</a></p>
+    </footer>
+
+</body>
+
+</html>
